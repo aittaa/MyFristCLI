@@ -6,7 +6,8 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>My Button Component</Text>
-      <MyButton />
+      <MyButton title="Button" />
+      <MyButton title="Button"> Children Props </MyButton>
     </View>
   );
 };

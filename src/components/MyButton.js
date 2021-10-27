@@ -1,7 +1,7 @@
 import React from 'react';
 import {Pressable, Text} from 'react-native';
 
-const MyButton = () => {
+const MyButton = props => {
   return (
     <Pressable
       style={{
@@ -11,7 +11,9 @@ const MyButton = () => {
         borderRadius: 10,
       }}
       onPress={() => alert('Click !!!')}>
-      <Text style={{fontSize: 24}}>My Button</Text>
+      <Text style={{color: 'white', fontSize: 24}}>
+        {props.children || props.title}
+      </Text>
     </Pressable>
   );
 };
