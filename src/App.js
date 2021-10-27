@@ -1,12 +1,12 @@
 import React from 'react';
-import {View, StyleSheet, Text, Button} from 'react-native';
+import {View, StyleSheet, Text} from 'react-native';
+import MyButton from './components/MyButton';
 
 const App = () => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>인생</Text>
-      <Text style={{fontSize: 30, marginBottom: 10}}>Button Componet</Text>
-      <Button title="Button" onPress={() => alert('Button Clicked')} />
+      <Text style={styles.text}>My Button Component</Text>
+      <MyButton />
     </View>
   );
 };
@@ -16,10 +16,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#fffff',
+    backgroundColor: '#fff',
   },
-  title: {
+  text: {
     fontSize: 30,
+    marginBottom: 10,
   },
 });
 
