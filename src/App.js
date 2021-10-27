@@ -6,9 +6,11 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>My Button Component</Text>
-      <MyButton title="Button" />
-      <MyButton title="Button"> Children Props </MyButton>
-      <MyButton />
+      <MyButton title="Button" onPress={() => alert('props')} />
+      <MyButton title="Button" onPress={() => alert('props')}>
+        Children Props
+      </MyButton>
+      <MyButton onPress={() => alert('Default')} />
     </View>
   );
 };

@@ -11,7 +11,7 @@ const MyButton = props => {
         margin: 10,
         borderRadius: 10,
       }}
-      onPress={() => alert('Click !!!')}>
+      onPress={() => props.onPress()}>
       <Text style={{color: 'white', fontSize: 24}}>
         {props.children || props.title}
       </Text>
@@ -25,7 +25,7 @@ MyButton.defaultProps = {
 
 MyButton.propTypes = {
   title: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  onPress: PropTypes.func.isRequired,
 };
 
 export default MyButton;
