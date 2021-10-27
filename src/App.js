@@ -8,6 +8,7 @@ const App = () => {
       <Text style={styles.text}>My Button Component</Text>
       <MyButton title="Button" />
       <MyButton title="Button"> Children Props </MyButton>
+      <MyButton />
     </View>
   );
 };

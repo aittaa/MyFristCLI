@@ -1,5 +1,6 @@
 import React from 'react';
 import {Pressable, Text} from 'react-native';
+import PropTypes from 'prop-types';
 
 const MyButton = props => {
   return (
@@ -16,6 +17,15 @@ const MyButton = props => {
       </Text>
     </Pressable>
   );
+};
+
+MyButton.defaultProps = {
+  title: 'Button',
+};
+
+MyButton.propTypes = {
+  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default MyButton;
